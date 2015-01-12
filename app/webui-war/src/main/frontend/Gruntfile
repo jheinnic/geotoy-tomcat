@@ -8,7 +8,7 @@ module.exports = function (grunt) {
             },
             files: []
         },
-        jade: {
+        simplemocha: {
             options: {
                 reporter: 'spec',
                 timeout: '5000'
@@ -40,7 +40,7 @@ module.exports = function (grunt) {
 
 
     grunt.registerTask('assets', ['exec:assets-force']);
-    grunt.registerTask('test', ['jshint', 'exec:assets', 'jade:full']);
+    grunt.registerTask('test', ['jshint', 'exec:assets', 'simplemocha:full']);
     grunt.registerTask('cover', 'exec:cover');
     grunt.registerTask('default', 'test');
 };
