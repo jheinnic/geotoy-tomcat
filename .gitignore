@@ -4,3 +4,14 @@ pom.xml.releaseBackup
 pom.xml.versionsBackup
 pom.xml.next
 release.properties
+
+# Eclipse
+.project
+.settings
+.classpath
+
+# vi backup and swap files
+*~
+*.swp
+*.swo
+
