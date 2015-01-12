@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project
+    xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>com.questinygroup.geotoy.poms</groupId>
+  <artifactId>geotoy-bom</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+
+  <name>Self-describing Bill of Materials for Geotoy Project</name>
+
+  <packaging>pom</packaging>
+
+  <properties>
+    <geotoy.version>0.0.1-SNAPSHOT</geotoy.version>
+  </properties>
+
+  <dependencyManagement>
+    <dependencies>
+      <!-- Questiny-Owned: Parent Poms -->
+      <dependency>
+        <groupId>com.questinygroup.geotoy.poms</groupId>
+        <artifactId>geotoy-bom</artifactId>
+        <version>0.0.1-SNAPSHOT</version>
+      </dependency>
+
+      <!-- Questiny-Owned: Infrastucture Projects -->
+      <dependency>
+        <groupId>com.questinygroup.geotoy.poms</groupId>
+        <artifactId>base-parent</artifactId>
+        <version>0.0.1-SNAPSHOT</version>
+      </dependency>
+
+      <dependency>
+        <groupId>com.questinygroup.geotoy.poms</groupId>
+        <artifactId>java-parent</artifactId>
+        <version>0.0.1-SNAPSHOT</version>
+      </dependency>
+
+      <dependency>
+        <groupId>com.questinygroup.geotoy.poms</groupId>
+        <artifactId>jar-parent</artifactId>
+        <version>0.0.1-SNAPSHOT</version>
+      </dependency>
+
+      <dependency>
+        <groupId>com.questinygroup.geotoy.poms</groupId>
+        <artifactId>war-parent</artifactId>
+        <version>0.0.1-SNAPSHOT</version>
+      </dependency>
+
+      <dependency>
+        <groupId>com.questinygroup.geotoy.poms</groupId>
+        <artifactId>ear-parent</artifactId>
+        <version>0.0.1-SNAPSHOT</version>
+      </dependency>
+
+      <!-- Questiny-Owned: Domain Object Model Projects -->
+
+      <!-- Questiny-Owned Service Layer -or- Resource Layer Projects -->
+      <dependency>
+        <groupId>com.questinygroup.geotoy.rest</groupId>
+        <artifactId>resources</artifactId>
+        <version>0.0.1-SNAPSHOT</version>
+      </dependency>
+
+      <!-- Questiny-Owned: Web Application Assemblies -->
+
+      <!-- Questiny-Owned: WiNS Installer -->
+    </dependencies>
+  </dependencyManagement>
+</project>

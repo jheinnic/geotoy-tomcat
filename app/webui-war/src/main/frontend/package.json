@@ -1,0 +1,22 @@
+{
+  "name": "geotoy",
+  "version": "0.0.1",
+  "authors": [
+    "John Heinnickel <jheinnic@hotmail.com>"
+  ],
+  "description": "GIS Learning Project",
+  "private": true,
+  "dependencies": {
+    "bluebird": "^1.0.3",
+    "nconf": "latest",
+    "winston": "latest"
+  },
+  "devDependencies": {
+    "bower": "latest",
+    "grunt-cli": "latest"
+  },
+  "cutDevDependencies": {
+    "nodemon": "1.2.0",
+    "requirejs": "~2.1.11"
+  }
+}

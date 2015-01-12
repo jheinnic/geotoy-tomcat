@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  
+  <groupId>com.questinygroup.geotoy</groupId>
+  <artifactId>poms</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+
+  <name>POM files for dependency management</name>
+  <description>Parent and Bill of Materials for internal dependency management.</description>
+  <packaging>pom</packaging>
+  
+  <modules>
+    <module>geotoy-bom</module>
+    <module>base-parent</module>
+    <module>servlet-parent</module>
+    <!--module>clientjs-parent</module>
+    <module>java-parent</module>
+    <module>webapp-parent</module-->
+  </modules>
+</project>

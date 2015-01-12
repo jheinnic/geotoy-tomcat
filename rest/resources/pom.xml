@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>com.questinygroup.geotoy.poms</groupId>
+    <artifactId>jar-parent</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+    <relativePath>../../poms/jar-parent</relativePath>
+  </parent>
+
+  <groupId>com.questinygroup.geotoy.rest</groupId>
+  <artifactId>resources</artifactId>
+
+  <name>Web UI for WiNS RESTful Services</name>
+  <description>Spring Controllers or Restlet Resources for request handling</description>
+
+  <packaging>jar</packaging>
+
+  <dependencies>
+    <!-- Just testing a dummy dependency -->
+    <dependency>
+      <groupId>org.projectreactor</groupId>
+      <artifactId>reactor-net</artifactId>
+    </dependency>
+  </dependencies>
+
+  <properties>
+    <geotoy.java.use-spring>true</geotoy.java.use-spring>
+    <geotoy.java.use-json>true</geotoy.java.use-json>
+  </properties>
+</project>
