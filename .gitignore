@@ -1,3 +1,7 @@
+# Java Crashes
+hs_err_pid*.log
+
+# Maven
 target/
 pom.xml.tag
 pom.xml.releaseBackup
