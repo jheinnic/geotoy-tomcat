@@ -45,11 +45,11 @@
     <module>poms/spring-parent</module>
     <module>lib/common-utils</module>
     <module>models/design-transport</module>
-    <module>domains/design-model</module>
     <module>domains/exec-model</module>
     <module>rest/sdk</module>
     <module>app/root-context</module>
     -->
+    <module>models/design-domain</module>
     <module>rest/resources</module>
     <module>app/webui-war</module>
     <!--
