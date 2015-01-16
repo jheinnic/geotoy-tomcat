@@ -1,0 +1,42 @@
+{
+  "name": "geotoy",
+  "version": "0.0.1",
+  "authors": [
+    "John Heinnickel <jheinnic@hotmail.com>"
+  ],
+  "description": "Portfolio Synth Project, Client Module",
+  "main": "",
+  "keywords": [
+    "questiny",
+    "gis"
+  ],
+  "license": "MIT",
+  "homepage": "http://questiny.jchein.info/geotoy/",
+  "private": true,
+  "dependencies": {
+    "angular": "~1.2.14",
+    "angular-animate": "~1.2.14",
+    "angular-cookies": "~1.2.14",
+    "angular-resource": "~1.2.14",
+    "angular-route": "~1.2.14",
+    "angular-http-auth": "1.2.1",
+    "angular-motion": "0.3.2",
+    "angular-ui-utils": "0.1.1",
+    "angular-strap": "2.0.3",
+    "angular-bootstrap": "0.11.0",
+    "angular-esri-map": "latest",
+    "bootstrap": "3.1.1",
+    "bootstrap-map-js": "latest",
+    "esri-leaflet": "latest",
+    "esri-leaflet-geocoder": "latest",
+    "esri-leaflet-heatmap-feature-layer": "latest",
+    "esri-leaflet-clustered-feature-layer": "latest",
+    "w3sink": "latest",
+    "requirejs": "2.1.14",
+    "require-cs": "0.4.4",
+    "requirejs-domready": "2.0.1"
+  },
+  "devDependencies": {
+    "angular-mocks": "~1.2.14"
+  }
+}

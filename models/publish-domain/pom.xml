@@ -8,9 +8,9 @@
   </parent>
 
   <groupId>com.questinygroup.geotoy.models</groupId>
-  <artifactId>esri-geometry</artifactId>
+  <artifactId>publish-domain</artifactId>
   <packaging>jar</packaging>
 
-  <name>GeoToy ESRI Geometry Domain Model</name>
-  <description>EMF XCore model replication the ESRI Geometry model</description>
+  <name>GeoToy Publish-Time User Domain Model</name>
+  <description>EMF XCore modeled for selecting binding design-time user artifacts to prepare them for deploying fix to a simulation environment.</description>
 </project>

@@ -4,7 +4,7 @@
     <groupId>com.questinygroup.geotoy.poms</groupId>
     <artifactId>jar-parent</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <relativeParent>../../poms/jar-parent</relativeParent>
+    <relativePath>../../poms/jar-parent</relativePath>
   </parent>
 
   <groupId>com.questinygroup.geotoy.models</groupId>
@@ -12,5 +12,5 @@
   <packaging>jar</packaging>
 
   <name>GeoToy Design-Time User Domain Model</name>
-  <description>
+  <description>EMF XCore model packages for GeoToy's design-time features</description>
 </project>

@@ -8,9 +8,9 @@
   </parent>
 
   <groupId>com.questinygroup.geotoy.models</groupId>
-  <artifactId>esri-geometry</artifactId>
+  <artifactId>runtime-domain</artifactId>
   <packaging>jar</packaging>
 
-  <name>GeoToy ESRI Geometry Domain Model</name>
-  <description>EMF XCore model replication the ESRI Geometry model</description>
+  <name>GeoToy Runtime Server Domain Model</name>
+  <description>EMF XCore modeled equivalent of ESRI's Geometry specification</description>
 </project>

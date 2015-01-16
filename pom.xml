@@ -40,7 +40,9 @@
     <module>poms/java-parent</module>
     <module>poms/jar-parent</module>
     <module>poms/war-parent</module>
+    <!-- Temporarily disabled until fixed
     <module>poms/ear-parent</module>
+    -->
     <!--
     <module>poms/spring-parent</module>
     <module>lib/common-utils</module>
@@ -48,10 +50,15 @@
     <module>domains/exec-model</module>
     <module>rest/sdk</module>
     <module>app/root-context</module>
+    <module>models/sdk-domain</module>
     -->
+    <module>models/esri-geometry</module>
     <module>models/design-domain</module>
-    <module>rest/resources</module>
+    <module>models/publish-domain</module>
+    <module>models/runtime-domain</module>
+    <module>rest/resources-server</module>
     <module>app/webui-war</module>
+    <module>apps/graph-ws</module>
     <!--
     <module>app/geotoy-war</module>
     <module>app/geotoy-ear</module>

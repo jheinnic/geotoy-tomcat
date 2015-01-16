@@ -10,7 +10,7 @@
   </parent>
 
   <groupId>com.questinygroup.geotoy.apps</groupId>
-  <artifactId>webui-war</artifactId>
+  <artifactId>graph-ws</artifactId>
   <name>Web UI for WiNS RESTful Services</name>
   <description>
 The Web UI for WiNS is packaged as a deployable and executable WAR archive.  When launched on separate servers, the executable mode may be simpler to manage as it doesn't expose any of Tomcat's administration interface directly.  If the webapps are installed together and you wish to run them from a single Tomcat container rather than having two running instances of the container runtime, both applications must be used in 'deployable' mode.
@@ -59,7 +59,34 @@ Without WiNS Specification Repository services, the WebUI can still can still op
   </build>
   
   <dependencies>
-  </dependencies>
+      <dependency>
+         <groupId>org.graphstream</groupId>
+         <artifactId>gs-core</artifactId>
+         <version>1.2</version>
+         <optional>false</optional>
+      </dependency>
+ 
+      <dependency>
+         <groupId>org.graphstream</groupId>
+         <artifactId>gs-algo</artifactId>
+         <version>1.2</version>
+         <optional>false</optional>
+      </dependency>
+ 
+      <!--dependency>
+         <groupId>org.graphstream</groupId>
+         <artifactId>gs-ui</artifactId>
+         <version>1.2</version>
+         <optional>false</optional>
+      </dependency-->
+ 
+      <!-- The new dependency : -->
+      <dependency>
+         <artifactId>commons-math</artifactId>
+         <groupId>org.apache.commons</groupId>
+         <version>2.1</version>
+         <optional>false</optional>
+      </dependency>  </dependencies>
 
   <profiles>
 <!-- 

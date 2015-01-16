@@ -58,15 +58,49 @@
       </dependency>
 
       <!-- Questiny-Owned: Domain Object Model Projects -->
+      <dependency>
+        <groupId>com.questinygroup.geotoy.models</groupId>
+        <artifactId>design-model</artifactId>
+        <version>0.0.1-SNAPSHOT</version>
+      </dependency>
+
+      <dependency>
+        <groupId>com.questinygroup.geotoy.models</groupId>
+        <artifactId>publish-model</artifactId>
+        <version>0.0.1-SNAPSHOT</version>
+      </dependency>
+
+      <dependency>
+        <groupId>com.questinygroup.geotoy.models</groupId>
+        <artifactId>runtime-model</artifactId>
+        <version>0.0.1-SNAPSHOT</version>
+      </dependency>
+
+      <dependency>
+        <groupId>com.questinygroup.geotoy.models</groupId>
+        <artifactId>esri-geometry</artifactId>
+        <version>0.0.1-SNAPSHOT</version>
+      </dependency>
 
       <!-- Questiny-Owned Service Layer -or- Resource Layer Projects -->
       <dependency>
         <groupId>com.questinygroup.geotoy.rest</groupId>
-        <artifactId>resources</artifactId>
+        <artifactId>resources-server</artifactId>
         <version>0.0.1-SNAPSHOT</version>
       </dependency>
 
       <!-- Questiny-Owned: Web Application Assemblies -->
+      <dependency>
+        <groupId>com.questinygroup.geotoy.apps</groupId>
+        <artifactId>webui-war</artifactId>
+        <version>0.0.1-SNAPSHOT</version>
+      </dependency>
+
+      <dependency>
+        <groupId>com.questinygroup.geotoy.apps</groupId>
+        <artifactId>graph-ws</artifactId>
+        <version>0.0.1-SNAPSHOT</version>
+      </dependency>
 
       <!-- Questiny-Owned: WiNS Installer -->
     </dependencies>

@@ -10,7 +10,7 @@
   </parent>
 
   <groupId>com.questinygroup.geotoy.rest</groupId>
-  <artifactId>resources</artifactId>
+  <artifactId>resources-server</artifactId>
 
   <name>Web UI for WiNS RESTful Services</name>
   <description>Spring Controllers or Restlet Resources for request handling</description>

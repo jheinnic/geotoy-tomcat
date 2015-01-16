@@ -9,10 +9,8 @@
   <artifactId>base-parent</artifactId>
   <version>0.0.1-SNAPSHOT</version>
 
-  <name>Root POM file for all other Questiny Parent and Artfiact POM files</name>
-  <description>
-Questiny GeoToy's root POM file.  Fixes the universe of all Maven plugin and depdendency version as well as default plugin configurations that are available to any child module.  Thus far, no dependent plugins and/or artifacts dependencies have conflicting fourth-party dependencies.  Should one someday arise, comments around the profiles tag describe what has been done to proactively mitigate the cost of accounting for it.
-  </description>
+  <name>Base Root Ancestor POM file for parent pom of all other Questiny projects</name>
+  <description>Questiny GeoToy's root POM file.  Fixes the universe of all Maven plugin and depdendency version as well as default plugin configurations that are available to any child module.  Thus far, no dependent plugins and/or artifacts dependencies have conflicting fourth-party dependencies.  Should one someday arise, comments around the profiles tag describe what has been done to proactively mitigate the cost of accounting for it.</description>
 
   <packaging>pom</packaging>
 
@@ -34,7 +32,7 @@ Questiny GeoToy's root POM file.  Fixes the universe of all Maven plugin and dep
     <maven-compiler.plugin-version>3.1</maven-compiler.plugin-version>
     <maven-deploy.plugin-version>2.4</maven-deploy.plugin-version>
     <maven-enforcer.plugin-version>1.0</maven-enforcer.plugin-version>
-    <maven-jar.plugin-version>3.1</maven-jar.plugin-version>
+    <maven-jar.plugin-version>2.5</maven-jar.plugin-version>
     <maven-resources.plugin-version>2.6</maven-resources.plugin-version>
     <maven-site.plugin-version>2.4</maven-site.plugin-version>
     <maven-surefire.plugin-version>2.15</maven-surefire.plugin-version>
@@ -156,12 +154,6 @@ Questiny GeoToy's root POM file.  Fixes the universe of all Maven plugin and dep
 
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
-          <artifactId>maven-jar-plugin</artifactId>
-          <version>${maven-jar.plugin-version}</version>
-        </plugin>
-
-        <plugin>
-          <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-source-plugin</artifactId>
           <version>${maven-source.plugin-version}</version>
         </plugin>
@@ -255,6 +247,7 @@ Questiny GeoToy's root POM file.  Fixes the universe of all Maven plugin and dep
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-jar-plugin</artifactId>
+          <version>${maven-jar.plugin-version}</version>
           <configuration>
             <archive>
               <manifest>
@@ -421,7 +414,7 @@ Questiny GeoToy's root POM file.  Fixes the universe of all Maven plugin and dep
         <configuration>
           <!-- optional: the default is "karma.conf.js" in your
                          working directory -->
-          <karmaConfPath>src/test/javascript/karma.conf.ci.js</karmaConfPath>
+	  <karmaConfPath>${project.basedir}/src/test/frontend/karma.conf.ci.js</karmaConfPath>
         </configuration>
       </execution>
         </executions>
@@ -489,7 +482,7 @@ Questiny GeoToy's root POM file.  Fixes the universe of all Maven plugin and dep
       <groupId>com.questinygroup.geotoy.poms</groupId>
       <artifactId>geotoy-bom</artifactId>
       <version>0.0.1-SNAPSHOT</version>
-	<type>pom</type>
+      <type>pom</type>
       <scope>import</scope>
     </dependency>
       
