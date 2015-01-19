@@ -50,24 +50,20 @@
     <module>domains/exec-model</module>
     <module>rest/sdk</module>
     <module>app/root-context</module>
-    <module>models/sdk-domain</module>
     -->
     <module>models/esri-geometry</module>
+    <module>models/sdk-domain</module>
     <module>models/design-domain</module>
     <module>models/publish-domain</module>
     <module>models/runtime-domain</module>
     <module>rest/resources-server</module>
     <module>app/webui-war</module>
     <module>apps/graph-ws</module>
+    <module>apps/gt-tutorial-swing</module>
     <!--
-    <module>app/geotoy-war</module>
     <module>app/geotoy-ear</module>
-    -->
-    <!--
-    <module>webapps/design-repo</module>
-    <module>webapps/execute-repo</module>
-    <module>webapps/sim-control</module>
-    <module>webapps/wins-agent</module>
+    <module>apps/sim-control</module>
+    <module>apps/wins-agent</module>
     -->
     <!-- Intermediate combinations of wars are also viable, but not yet defined.
 	 For example, the design and report repositories could be combined, or
@@ -80,6 +76,8 @@
 	 such as data access privilege levels. -->
     <!--
     <module>ears/wins-unified</module>
+    -->
+    <!--
     <module>installer</module>
     -->
   </modules>

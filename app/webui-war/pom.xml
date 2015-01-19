@@ -43,7 +43,7 @@ Without WiNS Specification Repository services, the WebUI can still can still op
                     <artifactId>frontend-maven-plugin</artifactId>
                     <versionRange>[0.0.20,)</versionRange>
                     <goals>
-                      <goal>blower</goal>
+                      <goal>bower</goal>
                     </goals>
                   </pluginExecutionFilter>
                   <action>

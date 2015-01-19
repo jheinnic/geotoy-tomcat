@@ -1,0 +1,54 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>com.questinygroup.geotoy.poms</groupId>
+    <artifactId>jar-parent</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+    <relativePath>../../poms/jar-parent/pom.xml</relativePath>
+  </parent>
+
+  <groupId>com.questinygroup.geotoy.apps</groupId>
+  <artifactId>gt-tutorial-swing</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <packaging>jar</packaging>
+
+  <name>GeoTools Quickstart example</name>
+  <description>GeoTools tutorial exercise implementation, built within the GeoToy build environment</description>
+
+  <url>http://geotools.org</url>
+
+  <properties>
+      <start-class>org.geotools.demo.Quickstart</start-class>
+  </properties>
+
+  <build>
+      <plugins>
+          <plugin>
+              <groupId>org.apache.maven.plugins</groupId>
+              <artifactId>maven-shade-plugin</artifactId>
+          </plugin>
+      </plugins>
+  </build>
+
+  <dependencies>
+      <dependency>
+          <groupId>org.geotools</groupId>
+          <artifactId>gt-shapefile</artifactId>
+      </dependency>
+      <dependency>
+          <groupId>org.geotools</groupId>
+          <artifactId>gt-epsg-hsql</artifactId>
+      </dependency>
+      <dependency>
+          <groupId>org.geotools</groupId>
+          <artifactId>gt-swing</artifactId>
+      </dependency>
+      <dependency>
+          <groupId>junit</groupId>
+          <artifactId>junit</artifactId>
+          <scope>test</scope>
+      </dependency>
+  </dependencies>
+</project>
+
