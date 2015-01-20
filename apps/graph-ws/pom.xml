@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-  <modelVersion>4.0.0</modelVersion>
-  <parent>
-    <groupId>com.questinygroup.geotoy.poms</groupId>
-    <artifactId>war-parent</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
-    <relativePath>../../poms/war-parent</relativePath>
-  </parent>
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>com.questinygroup.geotoy.poms</groupId>
+		<artifactId>war-parent</artifactId>
+		<version>0.0.1-SNAPSHOT</version>
+		<relativePath>../../poms/war-parent</relativePath>
+	</parent>
 
-  <groupId>com.questinygroup.geotoy.apps</groupId>
-  <artifactId>graph-ws</artifactId>
-  <name>Web UI for WiNS RESTful Services</name>
-  <description>
+	<groupId>com.questinygroup.geotoy.apps</groupId>
+	<artifactId>graph-ws</artifactId>
+	<name>Web UI for WiNS RESTful Services</name>
+	<description>
 The Web UI for WiNS is packaged as a deployable and executable WAR archive.  When launched on separate servers, the executable mode may be simpler to manage as it doesn't expose any of Tomcat's administration interface directly.  If the webapps are installed together and you wish to run them from a single Tomcat container rather than having two running instances of the container runtime, both applications must be used in 'deployable' mode.
 
 The UI application has no server-side dynamic behavior within its own scope.  It exists as an HTML5 application archive that is downloaded once and then executes from the client's application cache.  This allows the WebUI to define some behaviors that can operate without one or more of the server side modules online.
@@ -20,102 +20,80 @@ The UI application has no server-side dynamic behavior within its own scope.  It
 Without WiNS Specification Repository services, the WebUI can still can still operate on any OGC package in HTML5 Application Storage that contains NetworkTopology and/or SimulationParameters. 
   </description>
 
-  <packaging>war</packaging>
+	<packaging>war</packaging>
 
-  <properties>
-    <geotoy.war.use-frontend>true</geotoy.war.use-frontend>
-  </properties>
+	<properties>
+		<geotoy.war.use-frontend>true</geotoy.war.use-frontend>
+	</properties>
 
-  <build>
-    <pluginManagement>
-      <plugins>
-        <!--This plugin's configuration is used to store Eclipse m2e settings only. It has no influence on the Maven build itself.-->
-        <plugin>
-          <groupId>org.eclipse.m2e</groupId>
-          <artifactId>lifecycle-mapping</artifactId>
-          <version>1.0.0</version>
-          <configuration>
-            <lifecycleMappingMetadata>
-              <pluginExecutions>
-                <pluginExecution>
-                  <pluginExecutionFilter>
-                    <groupId>com.github.eirslett</groupId>
-                    <artifactId>frontend-maven-plugin</artifactId>
-                    <versionRange>[0.0.20,)</versionRange>
-                    <goals>
-                      <goal>blower</goal>
-                    </goals>
-                  </pluginExecutionFilter>
-                  <action>
-                    <ignore></ignore>
-                  </action>
-                </pluginExecution>
-              </pluginExecutions>
-            </lifecycleMappingMetadata>
-          </configuration>
-        </plugin>
-      </plugins>
-    </pluginManagement>
-  </build>
-  
-  <dependencies>
-      <dependency>
-         <groupId>org.graphstream</groupId>
-         <artifactId>gs-core</artifactId>
-         <version>1.2</version>
-         <optional>false</optional>
-      </dependency>
- 
-      <dependency>
-         <groupId>org.graphstream</groupId>
-         <artifactId>gs-algo</artifactId>
-         <version>1.2</version>
-         <optional>false</optional>
-      </dependency>
- 
-      <!--dependency>
-         <groupId>org.graphstream</groupId>
-         <artifactId>gs-ui</artifactId>
-         <version>1.2</version>
-         <optional>false</optional>
-      </dependency-->
- 
-      <!-- The new dependency : -->
-      <dependency>
-         <artifactId>commons-math</artifactId>
-         <groupId>org.apache.commons</groupId>
-         <version>2.1</version>
-         <optional>false</optional>
-      </dependency>  </dependencies>
+	<build>
+		<pluginManagement>
+			<plugins>
+				<!--This plugin's configuration is used to store Eclipse m2e settings 
+					only. It has no influence on the Maven build itself. -->
+				<plugin>
+					<groupId>org.eclipse.m2e</groupId>
+					<artifactId>lifecycle-mapping</artifactId>
+					<version>1.0.0</version>
+					<configuration>
+						<lifecycleMappingMetadata>
+							<pluginExecutions>
+								<pluginExecution>
+									<pluginExecutionFilter>
+										<groupId>com.github.eirslett</groupId>
+										<artifactId>frontend-maven-plugin</artifactId>
+										<versionRange>[0.0.20,)</versionRange>
+										<goals>
+											<goal>blower</goal>
+										</goals>
+									</pluginExecutionFilter>
+									<action>
+										<ignore></ignore>
+									</action>
+								</pluginExecution>
+							</pluginExecutions>
+						</lifecycleMappingMetadata>
+					</configuration>
+				</plugin>
+			</plugins>
+		</pluginManagement>
+	</build>
 
-  <profiles>
-<!-- 
-    <profile>
-      <id>try1</id>
-      <activation>
-        <property>
-          <name>!geotoy.war.use-frontend</name>
-        </property>
-      </activation>
-      <properties>
-        <geotoy.war.use-frontend>true</geotoy.war.use-frontend>
-      </properties>
-    </profile>
- -->
-  
-<!-- 
-    <profile>
-      <id>try2</id>
-      <activation>
-        <property>
-          <name>!geotoy.war.use-frontend</name>
-        </property>
-      </activation>
-      <properties>
-        <geotoy.war.use-frontend>true</geotoy.war.use-frontend>
-      </properties>
-    </profile>
--->
-  </profiles>
-  
+	<dependencies>
+		<dependency>
+			<groupId>org.graphstream</groupId>
+			<artifactId>gs-core</artifactId>
+			<version>1.2</version>
+			<optional>false</optional>
+		</dependency>
+
+		<dependency>
+			<groupId>org.graphstream</groupId>
+			<artifactId>gs-algo</artifactId>
+			<version>1.2</version>
+			<optional>false</optional>
+		</dependency>
+
+		<!--dependency> <groupId>org.graphstream</groupId> <artifactId>gs-ui</artifactId> 
+			<version>1.2</version> <optional>false</optional> </dependency -->
+
+		<!-- The new dependency : -->
+		<dependency>
+			<artifactId>commons-math</artifactId>
+			<groupId>org.apache.commons</groupId>
+			<version>2.1</version>
+			<optional>false</optional>
+		</dependency>
+	</dependencies>
+
+	<profiles>
+		<!-- <profile> <id>try1</id> <activation> <property> <name>!geotoy.war.use-frontend</name> 
+			</property> </activation> <properties> <geotoy.war.use-frontend>true</geotoy.war.use-frontend> 
+			</properties> </profile> -->
+
+		<!-- <profile> <id>try2</id> <activation> <property> <name>!geotoy.war.use-frontend</name> 
+			</property> </activation> <properties> <geotoy.war.use-frontend>true</geotoy.war.use-frontend> 
+			</properties> </profile> -->
+	</profiles>
+
 </project>
