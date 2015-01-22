@@ -1,16 +1,25 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-  <modelVersion>4.0.0</modelVersion>
-  <parent>
-    <groupId>com.questinygroup.geotoy.poms</groupId>
-    <artifactId>jar-parent</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
-    <relativePath>../../poms/jar-parent</relativePath>
-  </parent>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>com.questinygroup.geotoy.poms</groupId>
+		<artifactId>jar-parent</artifactId>
+		<version>0.0.1-SNAPSHOT</version>
+		<relativePath>../../poms/jar-parent</relativePath>
+	</parent>
 
-  <groupId>com.questinygroup.geotoy.models</groupId>
-  <artifactId>esri-geometry</artifactId>
-  <packaging>jar</packaging>
+	<groupId>com.questinygroup.geotoy.models</groupId>
+	<artifactId>esri-geometry</artifactId>
+	<packaging>jar</packaging>
 
-  <name>GeoToy ESRI Geometry Domain Model</name>
-  <description>EMF XCore model replication the ESRI Geometry model</description>
+	<name>GeoToy ESRI Geometry Domain Model</name>
+	<description>EMF XCore model replication the ESRI Geometry model</description>
+
+	<dependencies>
+		<dependency>
+			<groupId>com.esri.geometry</groupId>
+			<artifactId>esri-geometry-api</artifactId>
+			<version>${esri-geometry.version}</version>
+		</dependency>
+	</dependencies>
 </project>

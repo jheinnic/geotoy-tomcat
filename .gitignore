@@ -1,5 +1,6 @@
 # Java Crashes
 hs_err_pid*.log
+replay_pid*.log
 
 # Maven
 target/
@@ -19,5 +20,5 @@ release.properties
 *.swp
 *.swo
 
-lib
-lib.rar
+
+
