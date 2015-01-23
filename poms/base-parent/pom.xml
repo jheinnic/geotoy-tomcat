@@ -405,21 +405,23 @@
 							task (and you can remove this whole <configuration> section.) -> <arguments>build</arguments> 
 							</configuration> </execution -->
 
+<!--
 						<execution>
 							<id>javascript tests</id>
 							<goals>
 								<goal>karma</goal>
 							</goals>
 
-							<!-- optional: the default phase is "test". Some developers choose 
-								to run karma in the "integration-test" phase. -->
+							<! optional: the default phase is "test". Some developers choose 
+								to run karma in the "integration-test" phase. >
 							<phase>test</phase>
 
 							<configuration>
-								<!-- optional: the default is "karma.conf.js" in your working directory -->
+								<! optional: the default is "karma.conf.js" in your working directory >
 								<karmaConfPath>${project.basedir}/src/test/frontend/karma.conf.ci.js</karmaConfPath>
 							</configuration>
 						</execution>
+-->
 					</executions>
 				</plugin>
 
