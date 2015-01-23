@@ -1,0 +1,33 @@
+<project>
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+  	<groupId>com.questingygroup.geotoy.poms</groupId>
+  	<artifactId>base-parent</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+    <relativePath>../poms/base-parent</relativePath>
+  </parent>
+  
+  <groupId>com.questinygroup.geotoy</groupId>
+  <artifactId>installer</artifactId>
+  <name>GeoToy Installer</name>
+  <description>Windows Installer for GeoToy</description>
+  
+  <packaging>pom</packaging>
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.codehaus.mojo</groupId>
+        <artifactId>nsis-maven-plugin</artifactId>
+        <version>1.0-alpha-1</version>
+        <executions>
+          <execution>
+            <goals>
+              <goal>generate-project</goal>
+              <goal>compile</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
+    </plugins>
+  </build>
+</project>
