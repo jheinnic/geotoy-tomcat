@@ -27,6 +27,12 @@ Without WiNS Specification Repository services, the WebUI can still can still op
   </properties>
 
   <build>
+    <plugins>
+      <plugin>
+        <groupId>com.github.eirslett</groupId>
+        <artifactId>frontend-maven-plugin</artifactId>
+      </plugin>
+    </plugins>
     <pluginManagement>
       <plugins>
         <!--This plugin's configuration is used to store Eclipse m2e settings only. It has no influence on the Maven build itself.-->
@@ -90,5 +96,4 @@ Without WiNS Specification Repository services, the WebUI can still can still op
     </profile>
 -->
   </profiles>
-  
 </project>

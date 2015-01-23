@@ -25,7 +25,6 @@
     "angular-strap": "2.0.3",
     "angular-bootstrap": "0.11.0",
     "angular-esri-map": "latest",
-    "br-angular-dojo": "latest",
     "bootstrap": "3.1.1",
     "bootstrap-map-js": "latest",
     "leaflet": "latest",
@@ -40,8 +39,8 @@
     "terraformer-geostore-rtree": "latest",
     "terraformer-geostore-memory": "latest",
     "terraformer-geostore-localstorage": "latest",
-    "requirejs": "2.1.14",
     "require-cs": "0.4.4",
+    "requirejs": "2.1.14",
     "requirejs-domready": "2.0.1"
   },
   "devDependencies": {

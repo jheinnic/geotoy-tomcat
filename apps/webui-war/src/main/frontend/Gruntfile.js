@@ -44,4 +44,5 @@ module.exports = function (grunt) {
     grunt.registerTask('cover', 'exec:cover');
     grunt.registerTask('build', 'jshint');
     grunt.registerTask('default', 'test');
+    grunt.registerTask('build', 'jade');
 };
