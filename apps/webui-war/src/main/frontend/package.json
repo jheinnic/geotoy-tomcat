@@ -4,7 +4,7 @@
   "authors": [
     "John Heinnickel <jheinnic@hotmail.com>"
   ],
-  "description": "GIS Learning Project",
+  "description": "GeoToy Web UI Project",
   "private": true,
   "dependencies": {
     "bluebird": "^1.0.3",

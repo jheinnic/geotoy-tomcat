@@ -1,10 +1,10 @@
 {
-  "name": "geotoy",
+  "name": "graph-ws",
   "version": "0.0.1",
   "authors": [
     "John Heinnickel <jheinnic@hotmail.com>"
   ],
-  "description": "Portfolio Synth Project, Client Module",
+  "description": "GeoToy Graphing UI Exploration Webapp",
   "main": "",
   "keywords": [
     "questiny",
