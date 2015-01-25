@@ -1,6 +1,8 @@
 # Java Crashes
 hs_err_pid*.log
+hs_err_pid*.zip
 replay_pid*.log
+replay_pid*.zip
 
 # Maven
 target/
