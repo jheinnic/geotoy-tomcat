@@ -34,7 +34,7 @@
 		<maven-resources.plugin-version>2.6</maven-resources.plugin-version>
 		<maven-site.plugin-version>2.4</maven-site.plugin-version>
 		<maven-surefire.plugin-version>2.15</maven-surefire.plugin-version>
-		<maven-war.plugin-version>2.4</maven-war.plugin-version>
+		<maven-war.plugin-version>2.6</maven-war.plugin-version>
 		<tycho.plugin-version>4.2.0</tycho.plugin-version>
 		<xtend.plugin-version>2.7.2</xtend.plugin-version>
 		<xtext.plugin-version>2.7.2</xtext.plugin-version>
@@ -186,8 +186,8 @@
 							</goals>
 							<configuration>
 								<transformers>
-									<!-- This sets a main class for executing the jar as you woulf otherwise 
-										would do with the assembly plugin. -->
+									<!-- This sets a main class for executing the jar as you would otherwise 
+										 do with the assembly plugin. -->
 									<transformer
 										implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
 										<manifestEntries>
@@ -195,7 +195,7 @@
 										</manifestEntries>
 									</transformer>
 									<!-- This merges overlapping META-INF/services files from neighboring 
-										kindness and good relations. -->
+										 kindness and good relations. -->
 									<transformer
 										implementation="org.apache.maven.plugins.shade.resource.ServicesResourceTransformer" />
 								</transformers>
@@ -288,17 +288,49 @@
 						<primaryArtifact>true</primaryArtifact>
 						<resourceEncoding>utf-8</resourceEncoding>
 						<failOnMissingWebXml>true</failOnMissingWebXml>
-						<webResources>
+<!-- 					<webResources>
 							<resource>
-								<directory>${project.basedir}/src/main/webapp/WEB-INF</directory>
+								<directory>${project.basedir}\src\main\webapp\WEB-INF</directory>
 								<filtering>false</filtering>
 								<targetPath>WEB-INF</targetPath>
 								<includes>
+									<include>web.xml</include>
 									<include>**/spring-*.xml</include>
 									<include>geotoy.properties</include>
 								</includes>
 							</resource>
-						</webResources>
+							<resource>
+								<directory>${project.basedir}\src\main\lib\arcgis_js_v312_api\arcgis_js_api\library\3.12\3.12</directory>
+								<filtering>false</filtering>
+								<targetPath>lib/arcgis/3.12</targetPath>
+								<includes>
+									<include>**/*.js</include>
+									<include>**/*.css</include>
+									<include>**/*.json</include>
+									<include>**/*.md</include>
+									<include>**/*.png</include>
+									<include>**/*.gif</include>
+									<include>**/*</include>
+									<include>*.txt</include>
+								</includes>
+							</resource>
+							<resource>
+								<directory>${project.basedir}\src\main\lib\arcgis_js_v312_sdk\arcgis_js_api\sdk</directory>
+								<filtering>false</filtering>
+								<targetPath>sdk</targetPath>
+								<includes>
+									<include>**/*</include>
+								</includes>
+							</resource>
+							<resource>
+								<directory>${project.basedir}\src\main\frontend\bower_components</directory>
+								<filtering>false</filtering>
+								<targetPath>lib</targetPath>
+								<includes>
+									<include>**/*</include>
+								</includes>
+							</resource>
+						</webResources>-->
 					</configuration>
 				</plugin>
 
@@ -357,54 +389,13 @@
 							<goals>
 								<goal>npm</goal>
 							</goals>
-
-							<!-- optional: default phase is "generate-resources" -->
-							<phase>generate-resources</phase>
-
-							<configuration>
-								<!-- optional: The default argument is actually "install", so unless 
-									you need to run some other npm command, you can remove this whole <configuration> 
-									section. -->
-								<arguments>install</arguments>
-							</configuration>
 						</execution>
-
-						<execution>
-							<id>bower install</id>
-							<goals>
-								<goal>bower</goal>
-							</goals>
-
-							<configuration>
-								<!-- optional: The default argument is actually "install", so unless 
-									you need to run some other bower command, you can remove this whole <configuration> 
-									section. -->
-								<arguments>install</arguments>
-							</configuration>
-						</execution>
-
 						<execution>
 							<id>grunt build</id>
 							<goals>
 								<goal>grunt</goal>
 							</goals>
-
-							<!-- optional: the default phase is "generate-resources" -->
-							<phase>generate-resources</phase>
-
-							<configuration>
-								<!-- optional: if not specified, it will run Grunt's default task 
-									(and you can remove this whole <configuration> section.) -->
-								<arguments>build</arguments>
-							</configuration>
 						</execution>
-
-						<!--execution> <id>gulp build</id> <goals> <goal>gulp</goal> </goals> 
-							<- optional: the default phase is "generate-resources" -> <phase>generate-resources</phase> 
-							<configuration> <- optional: if not specified, it will run gulp's default 
-							task (and you can remove this whole <configuration> section.) -> <arguments>build</arguments> 
-							</configuration> </execution -->
-
 <!--
 						<execution>
 							<id>javascript tests</id>
