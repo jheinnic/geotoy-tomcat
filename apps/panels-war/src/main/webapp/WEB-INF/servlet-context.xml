@@ -19,5 +19,5 @@
 	<!-- Imports user-defined @Controller beans that process client requests -->
 
 	<!-- Handles HTTP GET requests for /resources/** by efficiently serving up static resources in the ${webappRoot}/resources directory -->
-	<mvc:resources mapping="/public/**" location="/public/" />
+	<mvc:resources mapping="/**" location="/public/" />
 </beans:beans>
