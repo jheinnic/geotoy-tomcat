@@ -1,4 +1,4 @@
-{  
+var cfg = {  
   "configurationSettings":[  
     {  
       "category":"<b>Configure template</b>",
@@ -39,4 +39,6 @@
   "values":{  
 
   }
-}
+};
+
+cfg;
