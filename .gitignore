@@ -22,5 +22,9 @@ release.properties
 *.swp
 *.swo
 
+# MacOSX
+.DS_Store
 
-
+# Temporary entry for an immediate directory that should go away more 
+# officially than last.  $3 repair...
+app/
