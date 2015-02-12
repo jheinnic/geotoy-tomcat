@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>com.questinygroup.geotoy.poms</groupId>
+		<artifactId>war-parent</artifactId>
+		<version>0.0.1-SNAPSHOT</version>
+		<relativePath>../../poms/war-parent</relativePath>
+	</parent>
+
+	<groupId>com.questinygroup.geotoy.apps</groupId>
+	<artifactId>alt-webui-war</artifactId>
+	<name>Web UI for WiNS RESTful Services</name>
+	<description>
+The Web UI for WiNS is packaged as a deployable and executable WAR archive.  When launched on separate servers, the executable mode may be simpler to manage as it doesn't expose any of Tomcat's administration interface directly.  If the webapps are installed together and you wish to run them from a single Tomcat container rather than having two running instances of the container runtime, both applications must be used in 'deployable' mode.
+
+The UI application has no server-side dynamic behavior within its own scope.  It exists as an HTML5 application archive that is downloaded once and then executes from the client's application cache.  This allows the WebUI to define some behaviors that can operate without one or more of the server side modules online.
+
+Without WiNS Specification Repository services, the WebUI can still can still operate on any OGC package in HTML5 Application Storage that contains NetworkTopology and/or SimulationParameters. 
+  </description>
+
+	<packaging>war</packaging>
+
+	<properties>
+		<geotoy.java.use-spring>true</geotoy.java.use-spring>
+		<geotoy.war.use-frontend>true</geotoy.war.use-frontend>
+	</properties>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>com.github.eirslett</groupId>
+				<artifactId>frontend-maven-plugin</artifactId>
+			</plugin>
+
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-war-plugin</artifactId>
+				<configuration>
+					<archiveClasses>true</archiveClasses>
+					<archive>
+						<manifest>
+							<Main-Class>${start-class}</Main-Class>
+						</manifest>
+					</archive>
+					<warName>${project.build.finalName}</warName>
+					<warSourceDirectory>${project.basedir}/src/main/webapp</warSourceDirectory>
+					<webappDirectory>${project.build.directory}/${project.build.finalName}</webappDirectory>
+					<primaryArtifact>true</primaryArtifact>
+					<resourceEncoding>utf-8</resourceEncoding>
+					<failOnMissingWebXml>true</failOnMissingWebXml>
+					<webResources>
+						<resource>
+							<directory>src/main/webapp/WEB-INF</directory>
+							<filtering>false</filtering>
+							<targetPath>WEB-INF</targetPath>
+							<includes>
+								<include>web.xml</include>
+								<include>servlet-context.xml</include>
+							</includes>
+						</resource>
+						<resource>
+							<directory>src/main/frontend/app</directory>
+							<targetPath>/</targetPath>
+						</resource>
+					</webResources>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+
+	<dependencies>
+      <dependency>
+        <groupId>com.esri.geometry</groupId>
+        <artifactId>esri-geometry-api</artifactId>
+      </dependency>
+      
+      <dependency> 
+        <groupId>org.geotools</groupId>
+        <artifactId>gt-shapefile</artifactId> 
+      </dependency>
+    </dependencies>
+
+	<profiles>
+		<!-- <profile> <id>try1</id> <activation> <property> <name>!geotoy.war.use-frontend</name> 
+			</property> </activation> <properties> <geotoy.war.use-frontend>true</geotoy.war.use-frontend> 
+			</properties> </profile> -->
+
+		<!-- <profile> <id>try2</id> <activation> <property> <name>!geotoy.war.use-frontend</name> 
+			</property> </activation> <properties> <geotoy.war.use-frontend>true</geotoy.war.use-frontend> 
+			</properties> </profile> -->
+	</profiles>
+</project>
