@@ -1,0 +1,61 @@
+{
+  "name": "geotoy",
+  "version": "0.0.1",
+  "authors": [
+    "John Heinnickel <jheinnic@hotmail.com>"
+  ],
+  "description": "GIS Learning Project",
+  "private": true,
+  "dependencies": {
+    "bluebird": "^1.0.3",
+    "nconf": "latest",
+    "winston": "latest"
+  },
+  "devDependencies": {
+    "bower": "latest",
+    "grunt": "^0.4.5",
+    "grunt-cli": "~0.1.13",
+    "grunt-css": "~0.5.4",
+    "grunt-shell": "~0.2.2",
+    "grunt-contrib-clean": "^0.6.0",
+    "grunt-contrib-coffee": "^0.12.0",
+    "grunt-contrib-concat": "~0.3.0",
+    "grunt-contrib-copy": "^0.7.0",
+    "grunt-contrib-jade": "^0.14.0",
+    "grunt-contrib-jasmine": "^0.8.2",
+    "grunt-contrib-jshint": "^0.10.0",
+    "grunt-contrib-less": "^1.0.0",
+    "grunt-contrib-rename": "0.0.3",
+    "grunt-contrib-requirejs": "^0.4.4",
+    "grunt-contrib-uglify": "^0.7.0",
+    "grunt-contrib-watch": "~0.4.4",
+    "load-grunt-tasks": "^2.0.0",
+    "grunt-karma": "~0.6.2",
+    "grunt-open": "~0.2.2",
+    "karma": "^0.12.31",
+    "karma-ng-scenario": "latest",
+    "karma-jasmine": "~0.1.3",
+    "karma-requirejs": "~0.2.0",
+    "karma-phantomjs-launcher": "~0.1.0",
+    "chai": "1.4.0"
+  },
+  "cutDevDependencies": {
+    "nodemon": "1.2.0",
+    "requirejs": "~2.1.11",
+    "ng-midway-tester": "2.0.5",
+    "grunt": "~0.4.1",
+    "grunt-exec": "^0.4.6",
+    "grunt-contrib-uglify": "~0.2.1",
+    "grunt-contrib-copy": "~0.4.1",
+    "grunt-contrib-connect": "~0.1.2",
+    "karma": "~0.10.10",
+    "karma-mocha": "latest",
+    "karma-chrome-launcher": "~0.1.0",
+    "karma-safari-launcher": "latest",
+    "karma-firefox-launcher": "~0.1.0",
+    "karma-script-launcher": "~0.1.0",
+    "karma-coffee-preprocessor": "~0.1.0",
+    "karma-html2js-preprocessor": "~0.1.0",
+    "bower": "~1.2.7"
+  }
+}
