@@ -16,6 +16,7 @@ release.properties
 .project
 .settings
 .classpath
+.springBeans
 
 # vi backup and swap files
 *~
@@ -27,4 +28,4 @@ release.properties
 
 # Temporary entry for an immediate directory that should go away more 
 # officially than last.  $3 repair...
-./app/
+/app/
