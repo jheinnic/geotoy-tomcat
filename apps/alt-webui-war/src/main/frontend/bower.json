@@ -16,243 +16,381 @@
     "amd"
   ],
   "dependencies": {
-    "jsapi-resources": "git://github.com/Esri/jsapi-resources",
-    "d3": "~3.5.3",
-    "util": "3.46.1",
-    "azimuthjs": "*",
-    "bootstrap": "3.3.2",
-    "font-awesome": "4.2.0",
-    "terraformer": "*",
-    "terraformer-arcgis-parser": "*",
-    "terraformer-wkt-parser": "*",
-    "terraformer-geostore": "*",
-    "terraformer-geostore-rtree": "*",
-    "terraformer-geostore-memory": "*",
-    "terraformer-geostore-localstorage": "*",
+    "d3": "~3.5",
+    "nvd3": "~1.7",
+    "util": "~3.46",
+    "azimuthjs": "git://github.com/mpriour/azimuthjs.git",
+    "bootstrap": "~3.3",
+    "font-awesome": "~4.2",
+    "terraformer": "~1.0",
+    "terraformer-arcgis-parser": "~1.0",
+    "terraformer-wkt-parser": "~1.0",
+    "terraformer-geostore": "~1.0",
+    "terraformer-geostore-rtree": "~1.0",
+    "terraformer-geostore-memory": "~1.0",
+    "terraformer-geostore-localstorage": "~1.0",
     "bootstrap-map-js": "git://github.com/Esri/bootstrap-map-js.git",
-    "w3sink": "git://github.com/graphstream/w3sink.git",
-  	"angular": "~1.3.10",
-    "angular-animate": "~1.3.10",
-    "angular-cookies": "~1.3.10",
-    "angular-resource": "~1.3.10",
-    "angular-route": "~1.3.10",
-    "angular-http-auth": "~1.2.2",
-    "angular-google-maps": "*",
-    "angular-motion": "~0.3.4",
-    "angular-ui-utils": "~0.2.1",
-    "angular-strap": "~2.1.6",
-    "angular-bootstrap": "0.12.0",
-    "angular-dragdrop": "~1.0.11",
-    "angular-leaflet": "~0.7.3",
+    "w3sink": "~0.0.1",
+    "angular": "~1.3",
+    "angular-animate": "~1.3",
+    "angular-cookies": "~1.3",
+    "angular-resource": "~1.3",
+    "angular-route": "~1.3",
+    "angular-http-auth": "~1.2",
+    "angular-google-maps": "~2.0",
+    "angular-motion": "~0.3",
+    "angular-ui-utils": "~0.2",
+    "angular-strap": "~2.1",
+    "angular-bootstrap": "~0.12",
+    "angular-dragdrop": "~1.0",
+    "angular-leaflet": "~0.7",
+    "angular-nvd3": "~0",
     "angular-esri-map": "~0.0.1-beta.1",
     "AngularEsriSample": "https://github.com/Reboog711/AngularEsriSample/tree/master/js",
     "angular-leaflet-directive": "https://github.com/tombatossals/angular-leaflet-directive/tree/master/dist",
-    "leaflet": "~0.7.3"
+    "leaflet": "~0.7"
   },
   "devDependencies": {
-    "angular-mocks": "~1.3.10"
+    "angular-mocks": "~1.3"
   },
   "overrides": {
     "angular": {
-      "main": ["angular.js", "angular.min.js", "angular.min.js.map", "angular-csp.css"],
+      "main": [
+        "angular.js",
+        "angular.min.js",
+        "angular.min.js.map",
+        "angular-csp.css"
+      ],
       "normalize": {
-        "js": ["*.js", "*.map"],
+        "js": [
+          "*.js",
+          "*.map"
+        ],
         "css": "*.css"
       }
     },
     "angular-animate": {
-      "main": ["angular-animate.js", "angular-animate.min.js", "angular-animate.min.js.map"],
+      "main": [
+        "angular-animate.js",
+        "angular-animate.min.js",
+        "angular-animate.min.js.map"
+      ],
       "normalize": {
-        "js": ["*.js", "*.map"]
+        "js": [
+          "*.js",
+          "*.map"
+        ]
       }
     },
     "angular-bootstrap": {
-      "main": ["ui-bootstrap.js", "ui-bootstrap.min.js", "ui-bootstrap-tpls.js", "ui-bootstrap-tpls.min.js"]
+      "main": [
+        "ui-bootstrap.js",
+        "ui-bootstrap.min.js",
+        "ui-bootstrap-tpls.js",
+        "ui-bootstrap-tpls.min.js"
+      ]
     },
     "angular-cookies": {
-      "main": ["angular-cookies.js", "angular-cookies.min.js", "angular-cookies.min.js.map"],
+      "main": [
+        "angular-cookies.js",
+        "angular-cookies.min.js",
+        "angular-cookies.min.js.map"
+      ],
       "normalize": {
-        "js": ["*.js", "*.map"]
+        "js": [
+          "*.js",
+          "*.map"
+        ]
       }
     },
     "angular-dragdrop": {
-      "main": ["src/angular-dragdrop.js", "src/angular-dragdrop.min.js"]
+      "main": [
+        "src/angular-dragdrop.js",
+        "src/angular-dragdrop.min.js"
+      ]
     },
     "angular-esri-map": {
-      "main": ["dist/angular-esri-map.js", "dist/angular-esri-map.min.js", "angular-esri-map.png"]
+      "main": [
+        "dist/angular-esri-map.js",
+        "dist/angular-esri-map.min.js",
+        "angular-esri-map.png"
+      ]
     },
     "angular-google-maps": {
       "main": [
-        "angular-google-maps.js", "angular-google-maps.min.js",
-        "angular-google-maps_dev_mapped.js", "angular-google-maps_dev_mapped.min.js", 
-        "angular-google-maps_dev_mapped.js.map", "angular-google-maps_dev_mapped.min.js.map"
-      ]
+        "angular-google-maps.js",
+        "angular-google-maps.min.js",
+        "angular-google-maps_dev_mapped.js",
+        "angular-google-maps_dev_mapped.min.js",
+        "angular-google-maps_dev_mapped.js.map",
+        "angular-google-maps_dev_mapped.min.js.map"
+      ],
       "normalize": {
-        "js": ["*.js", "*.map"]
+        "js": [
+          "*.js",
+          "*.map"
+        ]
       }
     },
     "angular-http-auth": {
       "main": "http-auth-interceptor"
     },
     "angular-leaflet": {
-      "main": ["angular-leaflet-directive.js", "angular-leaflet-directive.min.js"],
+      "main": [
+        "angular-leaflet-directive.js",
+        "angular-leaflet-directive.min.js"
+      ],
       "normalize": {
-        "js": ["*.js", "*.map"]
+        "js": [
+          "*.js",
+          "*.map"
+        ]
       }
     },
     "angular-mocks": {
       "main": "angular-mocks.js"
     },
     "angular-motion": {
-      "main": ["dist/angular-motion.css",  "dist/angular-motion.min.css", "dist/modules/*.css", "dist/*.min.css"],
+      "main": [
+        "dist/angular-motion.css",
+        "dist/angular-motion.min.css",
+        "dist/modules/*.css",
+        "dist/*.min.css"
+      ],
       "normalize": {
-        "css": ["dist/angular-motion.css", "dist/angular-motion.min.css"]
-        "css/modules": ["dist/modules/*.css", "dist/modules/*.min.css"]
+        "css": [
+          "dist/angular-motion.css",
+          "dist/angular-motion.min.css"
+        ],
+        "css/modules": [
+          "dist/modules/*.css",
+          "dist/modules/*.min.css"
+        ]
       }
     },
     "angular-resource": {
-      "main": ["angular-resource.js", "angular-resource.min.js", "angular-resource.min.js.map"],
+      "main": [
+        "angular-resource.js",
+        "angular-resource.min.js",
+        "angular-resource.min.js.map"
+      ],
       "normalize": {
-        "js": ["*.js", "*.map"]
+        "js": [
+          "*.js",
+          "*.map"
+        ]
       }
     },
     "angular-route": {
-      "main": ["angular-route.js", "angular-route.min.js", "angular-route.min.js.map"],
+      "main": [
+        "angular-route.js",
+        "angular-route.min.js",
+        "angular-route.min.js.map"
+      ],
       "normalize": {
-        "js": ["*.js", "*.map"]
+        "js": [
+          "*.js",
+          "*.map"
+        ]
       }
     },
     "angular-strap": {
-      "main": ["dist/*.js", "dist/modules/*.js", "dist/*.js.map", "dist/modules/*.js.map"],
+      "main": [
+        "dist/*.js",
+        "dist/modules/*.js",
+        "dist/*.js.map",
+        "dist/modules/*.js.map"
+      ],
       "normalize": {
-        "js": ["dist/*.js", "dist/*.map"]
-        "js/modules": ["dist/modules/*.js", "dist/modules/*.js.map"]
+        "js": [
+          "dist/*.js",
+          "dist/*.map"
+        ],
+        "js/modules": [
+          "dist/modules/*.js",
+          "dist/modules/*.js.map"
+        ]
       }
     },
     "angular-ui-utils": {
-      "main": ["ui-utils.js", "ui-utils.min.js", "ui-utils-ieshiv.js", "ui-utils-ieshiv.min.js"]
+      "main": [
+        "ui-utils.js",
+        "ui-utils.min.js",
+        "ui-utils-ieshiv.js",
+        "ui-utils-ieshiv.min.js"
+      ]
     },
     "azimuthjs": {
       "main": [
-        "src/services/component/layers.js", "src/services/component/map.js",
-        "src/directives/Layer.js", "src/directives/LayerSource.js", 
-        "src/directives/leafletMap.js", "src/directives/oiMap.js",
-        "src/module.js", "data/airports.json"
+        "src/services/component/layers.js",
+        "src/services/component/map.js",
+        "src/directives/Layer.js",
+        "src/directives/LayerSource.js",
+        "src/directives/leafletMap.js",
+        "src/directives/oiMap.js",
+        "src/module.js",
+        "data/airports.json"
       ],
       "normalize": {
-      	  "js": "src/module.js",
-      	  "data": "data/airports.json",
-      	  "js/services": ["src/services/component/layers.js", "src/services/component/map.js"],
-      	  "js/directives": ["src/directives/Layer.js", "src/directives/LayerSource.js", "src/directives/leafletMap.js", "src/directives/oiMap.js"]
+        "js": "src/module.js",
+        "data": "data/airports.json",
+        "js/services": [
+          "src/services/component/layers.js",
+          "src/services/component/map.js"
+        ],
+        "js/directives": [
+          "src/directives/Layer.js",
+          "src/directives/LayerSource.js",
+          "src/directives/leafletMap.js",
+          "src/directives/oiMap.js"
+        ]
       }
     },
     "bootstrap": {
       "main": "dist/*/*",
       "normalize": {
-      	"js": "*.js",
-      	"css": ["*.map", "*.css", "*.map"],
-      	"fonts": "fonts/glyphicons-halflings-regular.*"
+        "js": "*.js",
+        "css": [
+          "*.map",
+          "*.css",
+          "*.map"
+        ],
+        "fonts": "fonts/glyphicons-halflings-regular.*"
       }
     },
     "bootstrap-map-js": {
-      "main": ["dist/js/*.js", "dist/css/*.css"],
+      "main": [
+        "dist/js/*.js",
+        "dist/css/*.css"
+      ],
       "normalize": {
-      	"js": "*.js",
-      	"css": "*.css"
+        "js": "*.js",
+        "css": "*.css"
       }
     },
     "d3": {
       "main": "*.js"
     },
     "font-awesome": {
-      "main": ["css/*.css", "fonts/FontAwesome.otf", "fonts/fontawesome-webfont.*"],
+      "main": [
+        "css/*.css",
+        "fonts/FontAwesome.otf",
+        "fonts/fontawesome-webfont.*"
+      ],
       "normalize": {
         "css": "*.css",
         "fonts": "fonts/*"
       }
     },
     "jquery": {
-      "main": ["jquery.js", "jquery.min.js", "jquery.min.map"],
+      "main": [
+        "jquery.js",
+        "jquery.min.js",
+        "jquery.min.map"
+      ],
       "normalize": {
-        "js": ["*.js", "*.map"]
+        "js": [
+          "*.js",
+          "*.map"
+        ]
       }
     },
     "jquery-ui": {
-      "main": ["themes", "ui", "jquery-ui.js", "jquery-ui-min.js"],
+      "main": [
+        "themes",
+        "ui",
+        "jquery-ui.js",
+        "jquery-ui-min.js"
+      ],
       "normalize": {
-      	"js/themes": "themes",
-      	"js/ui": "ui",
-      	"js": ["jquery-ui.js", "jquery-ui-min.js"]
+        "js/themes": "themes",
+        "js/ui": "ui",
+        "js": [
+          "jquery-ui.js",
+          "jquery-ui-min.js"
+        ]
       }
     },
     "lodash": {
       "main": "dist/*.js",
       "normalize": {
-      	"js": "*.js"
+        "js": "*.js"
       }
     },
     "leaflet": {
-      "main": ["dist/leaflet.js", "dist/leaflet-src.js", "dist/leaflet.css", "dist/images/*"],
+      "main": [
+        "dist/leaflet.js",
+        "dist/leaflet-src.js",
+        "dist/leaflet.css",
+        "dist/images/*"
+      ],
       "normalize": {
-      	"js": "*.js",
-      	"css": "*.css",
-      	"data": "*.json"
+        "js": "*.js",
+        "css": "*.css",
+        "data": "*.json"
       }
     },
     "terraformer": {
       "main": "*.js",
       "normalize": {
-      	"js": "*.js"
+        "js": "*.js"
       }
     },
     "terraformer-arcgis-parser": {
       "main": "*.js",
       "normalize": {
-      	"js": "*.js"
+        "js": "*.js"
       }
     },
     "terraformer-wkt-parser": {
       "main": "*.js",
       "normalize": {
-      	"js": "*.js"
+        "js": "*.js"
       }
     },
     "terraformer-geostore": {
       "main": "browser/*.js",
       "normalize": {
-      	"js": "*.js"
+        "js": "*.js"
       }
     },
     "terraformer-geostore-rtree": {
       "main": "*.js",
       "normalize": {
-      	"js": "*.js"
+        "js": "*.js"
       }
     },
     "terraformer-geostore-memory": {
       "main": "*.js",
       "normalize": {
-      	"js": "*.js"
+        "js": "*.js"
       }
     },
     "terraformer-geostore-localstorage": {
       "main": "*.js",
       "normalize": {
-      	"js": "*.js"
+        "js": "*.js"
       }
     },
     "util": {
       "main": "util*.js",
       "normalize": {
-      	"js": "*.js"
+        "js": "*.js"
       }
     },
     "w3sink": {
-      "main": ["dist/w3sink.js", "dist/w3sink.min.js", "dist/w3sink.min.map"],
+      "main": [
+        "dist/w3sink.js",
+        "dist/w3sink.min.js",
+        "dist/w3sink.min.map"
+      ],
       "normalize": {
-        "js": ["*.js", "*.map"]
+        "js": [
+          "*.js",
+          "*.map"
+        ]
       }
-    }   
+    }
   },
   "ignore": [
     "**/.*.git",
@@ -264,5 +402,10 @@
   "junk": {
     "arcgis-runtime-samples-data": "git://github.com/Esri/arcgis-runtime-samples-data.git",
     "solutions-geoprocessing-toolbox": "git://github.com/Esri/solutions-geoprocessing-toolbox.git"
+  },
+  "resolutions": {
+    "nvd3": "~1.7",
+    "d3": "~3.5",
+    "angular": "1.3.x"
   }
 }
