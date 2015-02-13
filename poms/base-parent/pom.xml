@@ -11,7 +11,7 @@
   <version>0.0.1-SNAPSHOT</version>
  
   <name>GeoToy Root Ancestor POM File</name>
-  <description>Questiny GeoToy's root ancestor POM file.  Fixes the universe of all Maven plugin and artifact depdendency versions and configurations shared by all modules.</description>
+  <description>Questiny GeoToy's root ancestor POM file.  Fixes the universe of all Maven plugin and artifact dependency versions and configurations shared by all modules.</description>
 
   <packaging>pom</packaging>
   
@@ -289,21 +289,6 @@
             <primaryArtifact>true</primaryArtifact>
             <resourceEncoding>utf-8</resourceEncoding>
             <failOnMissingWebXml>true</failOnMissingWebXml>
-            <webResources>
-              <resource>
-                <directory>src/main/webapp/WEB-INF</directory>
-                <filtering>false</filtering>
-                <targetPath>WEB-INF</targetPath>
-                <includes>
-                  <include>web.xml</include>
-                  <include>servlet-context.xml</include>
-                </includes>
-              </resource>
-              <resource>
-                <directory>src/main/frontend/app</directory>
-                <targetPath>/</targetPath>
-              </resource>
-            </webResources>
           </configuration>
         </plugin>
 
