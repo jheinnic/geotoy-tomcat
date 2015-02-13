@@ -27,4 +27,4 @@ release.properties
 
 # Temporary entry for an immediate directory that should go away more 
 # officially than last.  $3 repair...
-app/
+./app/
