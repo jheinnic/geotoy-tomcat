@@ -5,32 +5,23 @@
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"
 >
   <modelVersion>4.0.0</modelVersion>
-  
   <groupId>com.questinygroup.geotoy.poms</groupId>
   <artifactId>base-parent</artifactId>
   <version>0.0.1-SNAPSHOT</version>
- 
   <name>GeoToy Root Ancestor POM File</name>
   <description>Questiny GeoToy's root ancestor POM file.  Fixes the universe of all Maven plugin and artifact dependency versions and configurations shared by all modules.</description>
-
   <packaging>pom</packaging>
-  
   <properties>
     <!-- Maven Project Properties -->
     <project.libdir>${project.basedir}/lib</project.libdir>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    
-    
     <!-- Maven Wagon Versions -->
     <aws-maven.extension-version>5.0.0.RELEASE</aws-maven.extension-version>
-    
-    
     <!-- S3 Maven Deploy Bucket -->
     <s3-deploy-bucket>questiny-maven</s3-deploy-bucket>
-    
-    
     <!-- Maven Plugin Versions -->
     <frontend.plugin-version>0.0.20</frontend.plugin-version>
+    <geoserver-maven.plugin-version>1.7.0</geoserver-maven.plugin-version>
     <maven-assembly.plugin-version>2.4.1</maven-assembly.plugin-version>
     <maven-compiler.plugin-version>3.1</maven-compiler.plugin-version>
     <maven-deploy.plugin-version>2.4</maven-deploy.plugin-version>
@@ -43,19 +34,18 @@
     <tycho.plugin-version>4.2.0</tycho.plugin-version>
     <xtend.plugin-version>2.7.2</xtend.plugin-version>
     <xtext.plugin-version>2.7.2</xtext.plugin-version>
-    
-    
+
     <!-- Project Dependency Versions -->
     <ant.version>1.7.1</ant.version>
     <apache-cxf.version>3.0.0</apache-cxf.version>
+    <apache-poi.version>3.8</apache-poi.version>
     <apns.version>0.1.6</apns.version>
     <awaitility.version>1.2.4</awaitility.version>
     <aws-java-sdk.version>1.7.14</aws-java-sdk.version>
     <bookkeeper.version>4.3.0</bookkeeper.version>
-    
+
     <!-- BEGIN Suspect not needed> <log4j.version>1.2.14</log4j.version> 
       <END Suspect not needed -->
-      
     <c3p0.version>0.9.1.2</c3p0.version>
     <chill-java.version>0.3.6</chill-java.version>
     <chronicle.version>3.3.2</chronicle.version>
@@ -73,11 +63,11 @@
     <commons-pool2.version>2.2</commons-pool2.version>
     <cqengine.version>1.2.7</cqengine.version>
     <curator.version>2.7.0</curator.version>
-    
+
     <disruptor-google.version>2.7.1</disruptor-google.version>
     <disruptor-lmax.version>3.2.1</disruptor-lmax.version>
-    
     <easymock.version>3.2</easymock.version>
+    <ehcache.version>2.4.3</ehcache.version>
     <emf-ecore-change.version>2.10.0.v20140901-1043</emf-ecore-change.version>
     <emf-ecore.version>2.10.1</emf-ecore.version>
     <emf-edit.version>2.10.1</emf-edit.version>
@@ -86,14 +76,18 @@
     <emf-xtext-codegen.version>1.1.1</emf-xtext-codegen.version>
     <esri-geometry.version>1.2</esri-geometry.version>
     <exificient.version>0.9.3</exificient.version>
-    
+
     <geotools.version>12.2</geotools.version>
+    <geoserver.version>1.7.0</geoserver.version>
+    <geoserver-wfsv.version>1.6.2</geoserver-wfsv.version>
     <guava.version>16.0</guava.version>
-    <hibernate-core.version>4.3.5.Final</hibernate-core.version>
-    <hibernate-validator.version>5.1.1.Final</hibernate-validator.version>
+    <hibernate-core.version>4.3.8.Final</hibernate-core.version>
+    <hibernate-spatial.version>4.3</hibernate-spatial.version>
+    <hibernate-search.version>5.0.1.Final</hibernate-search.version>
+    <hibernate-validator.version>5.1.3.Final</hibernate-validator.version>
     <httpclient.version>4.2.1</httpclient.version>
     <insight-spring.version>1.9.2.RELEASE</insight-spring.version>
-    
+
     <!-- TODO: Was 1.9.12 in cluster demo... Can 1.x and 2.x co-exist? -->
     <jackson1.version>1.9.12</jackson1.version>
     <jackson2.version>2.4.4</jackson2.version>
@@ -105,12 +99,15 @@
     <javax.websocket.version>1.0</javax.websocket.version>
     <jedis.version>2.4.2</jedis.version>
     <joda-time.version>2.1</joda-time.version>
+    <jts.version>1.13</jts.version>
     <junit.version>4.10</junit.version>
     
     <logback-classic.version>1.1.2</logback-classic.version>
     <mockito.version>1.8.5</mockito.version>
     <mongodb.client.version>2.12.4</mongodb.client.version>
     <mysql-connector.version>5.1.26</mysql-connector.version>
+    <postgis.version>1.3.3</postgis.version>
+    <postgresql-driver.version>8.4-701.jdbc3</postgresql-driver.version>
     <protobuf.version>2.4.1</protobuf.version>
     <powermock.version>1.5.4</powermock.version>
 
@@ -131,8 +128,8 @@
     <spring.data-rest.version>2.2.1.RELEASE</spring.data-rest.version>
     <spring.integration.version>4.1.1.RELEASE</spring.integration.version>
     <spring.session.version>1.0.0.RELEASE</spring.session.version>
-    <!--spring.support.version>2.0.8.RELEASE</spring.support.version -->
 
+    <!--spring.support.version>2.0.8.RELEASE</spring.support.version -->
     <tomcat.version>7.0.55</tomcat.version>
     <xbeans-spring.version>3.7</xbeans-spring.version>
     <xmlunit.version>1.3</xmlunit.version>
@@ -153,30 +150,25 @@
             <target>1.7</target>
           </configuration>
         </plugin>
- 
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <version>${maven-source.plugin-version}</version>
         </plugin>
-
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-javadoc-plugin</artifactId>
           <version>${maven-javadoc.plugin-version}</version>
         </plugin>
-
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-deploy-plugin</artifactId>
           <version>${maven-deploy.plugin-version}</version>
         </plugin>
-
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-site-plugin</artifactId>
           <version>${maven-site.plugin-version}</version>
         </plugin>
-
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-shade-plugin</artifactId>
@@ -207,7 +199,6 @@
             </execution>
           </executions>
         </plugin>
-
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-surefire-plugin</artifactId>
@@ -232,7 +223,6 @@
             </includes>
           </configuration>
         </plugin>
-        
         <plugin>
           <groupId>org.eclipse.xtend</groupId>
           <artifactId>xtend-maven-plugin</artifactId>
@@ -252,14 +242,17 @@
             </execution>
           </executions>
         </plugin>
-        
         <plugin>
           <groupId>org.eclipse.tycho</groupId>
           <artifactId>tycho-maven-plugin</artifactId>
           <version>${tycho.version}</version>
           <extensions>true</extensions>
         </plugin>
-        
+        <plugin>
+          <groupId>org.geoserver.maven</groupId>
+          <artifactId>config</artifactId>
+          <version>${geoserver-maven.plugin-version}</version>
+        </plugin>
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-jar-plugin</artifactId>
@@ -272,7 +265,6 @@
             </archive>
           </configuration>
         </plugin>
-
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-war-plugin</artifactId>
@@ -291,7 +283,6 @@
             <failOnMissingWebXml>true</failOnMissingWebXml>
           </configuration>
         </plugin>
-
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-assembly-plugin</artifactId>
@@ -309,7 +300,6 @@
             </execution>
           </executions>
         </plugin>
-
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-resources-plugin</artifactId>
@@ -320,7 +310,6 @@
             </delimiters>
           </configuration>
         </plugin>
-
         <plugin>
           <groupId>com.github.eirslett</groupId>
           <artifactId>frontend-maven-plugin</artifactId>
@@ -365,7 +354,6 @@
               </configuration> </execution> -->
           </executions>
         </plugin>
-
         <plugin>
           <groupId>org.codehaus.mojo</groupId>
           <artifactId>exec-maven-plugin</artifactId>
@@ -373,7 +361,6 @@
             <Main-Class>${start-class}</Main-Class>
           </configuration>
         </plugin>
-
         <plugin>
           <groupId>pl.project13.maven</groupId>
           <artifactId>git-commit-id-plugin</artifactId>
@@ -394,7 +381,7 @@
         </plugin>
       </plugins>
     </pluginManagement>
-
+ 
     <resources>
       <resource>
         <directory>src/main/resources</directory>
@@ -407,6 +394,7 @@
         <filtering>false</filtering>
       </testResource>
     </testResources>
+ 
     <extensions>
       <extension>
         <groupId>org.springframework.build</groupId>
@@ -415,6 +403,7 @@
       </extension>
     </extensions>
   </build>
+  
   <dependencyManagement>
     <dependencies>
       <!-- Questiny-Owned: Infrastucture Projects -->
@@ -452,6 +441,7 @@
         <artifactId>esri-geometry-api</artifactId>
         <version>${esri-geometry.version}</version>
       </dependency>
+ 
       <!-- OpenGIS -->
       <dependency>
         <groupId>org.geotools</groupId>
@@ -468,6 +458,53 @@
         <artifactId>gt-swing</artifactId>
         <version>${geotools.version}</version>
       </dependency>
+
+      <dependency>
+        <groupId>org.geoserver</groupId>
+        <artifactId>net.opengis.wfsv</artifactId>
+        <version>${geoserver-wfsv.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.geoserver</groupId>
+        <artifactId>wfs</artifactId>
+        <version>${geoserver.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.geoserver</groupId>
+        <artifactId>wms</artifactId>
+        <version>${geoserver.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.geoserver</groupId>
+        <artifactId>ows</artifactId>
+        <version>${geoserver.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.geoserver</groupId>
+        <artifactId>platform</artifactId>
+        <version>${geoserver.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.geoserver</groupId>
+        <artifactId>web</artifactId>
+        <version>${geoserver.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.geoserver</groupId>
+        <artifactId>data</artifactId>
+        <version>${geoserver.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.geoserver</groupId>
+        <artifactId>validation</artifactId>
+        <version>${geoserver.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.geoserver.maven</groupId>
+        <artifactId>geoserver-archetype-wfsoutputformat</artifactId>
+        <version>${geoserver.version}</version>
+      </dependency>
+ 
       <!-- Java Extensions: APIs (only) -->
       <dependency>
         <groupId>org.hibernate.javax.persistence</groupId>
@@ -502,18 +539,38 @@
         <artifactId>validation-api</artifactId>
         <version>${javax.validation.version}</version>
       </dependency>
+ 
       <!-- MySQL Connector -->
       <dependency>
         <groupId>mysql</groupId>
         <artifactId>mysql-connector-java</artifactId>
         <version>${mysql-connector.version}</version>
       </dependency>
+ 
+      <!-- the postgresql driver -->
+      <dependency>
+        <groupId>postgresql</groupId>
+        <artifactId>postgresql</artifactId>
+        <version>${postgresql-driver.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.postgis</groupId>
+        <artifactId>postgis-jdbc</artifactId>
+        <version>${postgis.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.postgis</groupId>
+        <artifactId>postgis-stubs</artifactId>
+        <version>${postgis.version}</version>
+      </dependency>
+ 
       <!-- Apache Bookkeeper -->
       <dependency>
         <groupId>org.apache.bookkeeper</groupId>
         <artifactId>bookkeeper-server</artifactId>
         <version>${bookkeeper.version}</version>
       </dependency>
+      
       <!-- OpenHFT Chronicle -->
       <dependency>
         <groupId>net.openhft</groupId>
@@ -525,18 +582,21 @@
         <artifactId>chronicle-logger</artifactId>
         <version>${chronicle-logger.version}</version>
       </dependency>
+
       <!-- RabbitMQ AMQP Client -->
       <dependency>
         <groupId>com.rabbitmq</groupId>
         <artifactId>amqp-client</artifactId>
         <version>${rabbitmq.version}</version>
       </dependency>
+
       <!-- Google Protobuf -->
       <dependency>
         <groupId>com.google.protobuf</groupId>
         <artifactId>protobuf-java</artifactId>
         <version>${protobuf.version}</version>
       </dependency>
+
       <!-- Logging -->
       <dependency>
         <groupId>org.slf4j</groupId>
@@ -558,11 +618,13 @@
         <artifactId>jcl-over-slf4j</artifactId>
         <version>${slf4j.version}</version>
       </dependency>
+
       <dependency>
         <groupId>ch.qos.logback</groupId>
         <artifactId>logback-classic</artifactId>
         <version>${logback-classic.version}</version>
       </dependency>
+
       <!-- Connection Pooling -->
       <dependency>
         <groupId>c3p0</groupId>
@@ -574,6 +636,7 @@
         <artifactId>bonecp</artifactId>
         <version>${bonecp.version}</version>
       </dependency>
+
       <!-- Tomcat Servlet API (repackaging of the JavaX standard?) -->
       <dependency>
         <groupId>org.apache.tomcat</groupId>
@@ -581,6 +644,7 @@
         <version>${tomcat.version}</version>
         <scope>provided</scope>
       </dependency>
+
       <!-- Apache CXF's CDI -->
       <!-- CDI 1.1 required to use annotation-based validation. May require 
         configuration and/or implementation selection to use in Tomcat 7.0.27 container. 
@@ -591,7 +655,20 @@
         <artifactId>cxf-integration-cdi</artifactId>
         <version>${apache-cxf.version}</version>
       </dependency>
-      <!-- Hibernate JSR-XXX Valiator -->
+      
+      <!-- Apache POI for parsing Microsoft Office documents to access their content and structure -->
+      <dependency>
+        <groupId>org.apache.poi</groupId>
+        <artifactId>poi</artifactId>
+        <version>${apache-poi.version}</version>
+      </dependency>
+
+      <!-- Hibernate Validator - Reference Implementation for JSR-303 -->
+      <dependency>
+        <groupId>org.hibernate</groupId>
+        <artifactId>hibernate-validator</artifactId>
+        <version>${hibernate-validator.version}</version>
+      </dependency>
       <dependency>
         <groupId>org.hibernate</groupId>
         <artifactId>hibernate-validator-cdi</artifactId>
@@ -602,6 +679,7 @@
         <artifactId>javax.el</artifactId>
         <version>${javax.el.version}</version>
       </dependency>
+
       <!-- Apache Commons and HTTPClient -->
       <dependency>
         <groupId>commons-beanutils</groupId>
@@ -658,12 +736,15 @@
         <artifactId>commons-pool2</artifactId>
         <version>${commons-pool2.version}</version>
       </dependency>
+
       <!-- Non-Commons Apache Projects -->
       <dependency>
         <groupId>org.apache.httpcomponents</groupId>
         <artifactId>httpclient</artifactId>
         <version>${httpclient.version}</version>
       </dependency>
+
+      <!-- Clustering support: Zookeeper and Bookkeeper -->
       <dependency>
         <groupId>org.apache.zookeeper</groupId>
         <artifactId>zookeeper</artifactId>
@@ -690,6 +771,7 @@
         <artifactId>curator-recipes</artifactId>
         <version>${curator.version}</version>
       </dependency>
+
       <!-- Google: CQEngine, Disruptor, and Guava -->
       <dependency>
         <groupId>com.googlecode.cqengine</groupId>
@@ -706,12 +788,14 @@
         <artifactId>guava</artifactId>
         <version>${guava.version}</version>
       </dependency>
+
       <!-- LMAX Disruptor -->
       <dependency>
         <groupId>com.lmax</groupId>
         <artifactId>disruptor</artifactId>
         <version>${disruptor-lmax.version}</version>
       </dependency>
+
       <!-- Spring Project Umbrella Modules -->
       <dependency>
         <groupId>org.springframework.amqp</groupId>
@@ -784,6 +868,7 @@
         <artifactId>spring-session-data-redis</artifactId>
         <version>${spring.session.version}</version>
       </dependency>
+
       <!-- Spring-Specific 4th party dependencies -->
       <dependency>
         <groupId>org.apache.xbean</groupId>
@@ -795,6 +880,7 @@
         <artifactId>insight-annotation</artifactId>
         <version>${insight-spring.version}</version>
       </dependency>
+
       <!-- Spring-Specific Reactor dependencies -->
       <dependency>
         <groupId>org.projectreactor.spring</groupId>
@@ -816,6 +902,7 @@
         <artifactId>reactor-spring-webmvc</artifactId>
         <version>${reactor.version}</version>
       </dependency>
+
       <!-- Project Reactor -->
       <dependency>
         <groupId>org.projectreactor</groupId>
@@ -842,7 +929,8 @@
         <artifactId>reactor-groovy-extensions</artifactId>
         <version>${reactor.version}</version>
       </dependency>
-      <!-- MySema Query DSL -->
+
+      <!-- MySema Query DSL for use with CQEngine -->
       <dependency>
         <groupId>com.mysema.querydsl</groupId>
         <artifactId>querydsl-apt</artifactId>
@@ -854,46 +942,104 @@
         <artifactId>querydsl-jpa</artifactId>
         <version>${querydsl.version}</version>
       </dependency>
-      <!-- Hibernate -->
+      
+      <!-- Hibernate Core -->
       <dependency>
         <groupId>org.hibernate</groupId>
-        <artifactId>hibernate-ehcache</artifactId>
+        <artifactId>hibernate-core</artifactId>
         <version>${hibernate-core.version}</version>
       </dependency>
+      <!-- Hibernate Entity Manager -->
       <dependency>
         <groupId>org.hibernate</groupId>
         <artifactId>hibernate-entitymanager</artifactId>
         <version>${hibernate-core.version}</version>
       </dependency>
+      <!-- Hibernate Second Tier Cross-Session Caching -->
       <dependency>
         <groupId>org.hibernate</groupId>
-        <artifactId>hibernate-validator</artifactId>
-        <version>${hibernate-validator.version}</version>
+        <artifactId>hibernate-ehcache</artifactId>
+        <version>${hibernate-core.version}</version>
       </dependency>
+      <!-- Hibernate Connection Pooling -->
+      <dependency>
+        <groupId>org.hibernate</groupId>
+        <artifactId>hibernate-c3p0</artifactId>
+        <version>${hibernate-core.version}</version>
+      </dependency>
+      <!-- Hibernate Entity Versioning -->
+      <dependency>
+        <groupId>org.hibernate</groupId>
+        <artifactId>hibernate-envers</artifactId>
+        <version>${hibernate-core.version}</version>
+      </dependency>
+      <!-- Hibertnate JPA Model Generation -->
+      <dependency>
+        <groupId>org.hibernate</groupId>
+        <artifactId>hibernate-jpamodelgen</artifactId>
+        <version>${hibernate-core.version}</version>
+      </dependency>
+      <!-- Hibernate Entity Testing -->
+      <dependency>
+        <groupId>org.hibernate</groupId>
+        <artifactId>hibernate-testing</artifactId>
+        <version>${hibernate-core.version}</version>
+      </dependency>
+
+      <!-- Hibernate Search -->
+      <dependency>
+        <groupId>org.hibernate</groupId>
+        <artifactId>hibernate-search-engineh</artifactId>
+        <version>${hibernate-search.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.hibernate</groupId>
+        <artifactId>hibernate-search-orm</artifactId>
+        <version>${hibernate-search.version}</version>
+      </dependency>
+      
+      <!-- Hibernate Spatial -->
+      <dependency>
+        <groupId>org.hibernate</groupId>
+        <artifactId>hibernate-spatial</artifactId>
+        <version>${hibernate-spatial.version}</version>
+      </dependency>      
+
+      <!-- JTS Geometry Library based on OGC Simple Features Specifcation -->
+      <dependency>
+        <groupId>com.vividsolutions</groupId>
+        <artifactId>jts</artifactId>
+        <version>${jts.version}</version>
+      </dependency>
+
       <!-- Joda Time -->
       <dependency>
         <groupId>joda-time</groupId>
         <artifactId>joda-time</artifactId>
         <version>${joda-time.version}</version>
       </dependency>
+      
       <!-- AWS Libraries -->
       <dependency>
         <groupId>com.amazonaws</groupId>
         <artifactId>aws-java-sdk</artifactId>
         <version>${aws-java-sdk.version}</version>
       </dependency>
+      
       <!-- Redis client -->
       <dependency>
         <groupId>redis.clients</groupId>
         <artifactId>jedis</artifactId>
         <version>${jedis.version}</version>
       </dependency>
+      
       <!-- Twitter Chill -->
       <dependency>
         <groupId>com.twitter</groupId>
         <artifactId>chill-java</artifactId>
         <version>${chill-java.version}</version>
       </dependency>
+      
       <!-- Jackson2 JSON Mapper -->
       <!-- TODO: 1.9.x and 2.x co-existance check -->
       <dependency>
@@ -926,6 +1072,7 @@
         <artifactId>jackson-datatype-jsr310</artifactId>
         <version>${jackson2.version}</version>
       </dependency>
+      
       <!-- Jackson, v1. Legacy. -->
       <dependency>
         <groupId>org.codehaus.jackson</groupId>
@@ -937,12 +1084,14 @@
         <artifactId>jackson-xc</artifactId>
         <version>${jackson1.version}</version>
       </dependency>
+      
       <!-- Siemens Open Source Implementation of W3C's EXI format -->
       <dependency>
         <groupId>com.siemens.ct.exi</groupId>
         <artifactId>exificient</artifactId>
         <version>${exificient.version}</version>
       </dependency>
+      
       <!-- Eclipse Modeling Framework - Runtime -->
       <dependency>
         <groupId>org.eclipse.emf</groupId>
@@ -994,6 +1143,7 @@
         <artifactId>org.eclipse.xtend.lib.macro</artifactId>
         <version>${xtext.version}</version>
       </dependency>
+      
       <!-- Eclipse Modeling Framework - Codegen -->
       <dependency>
         <groupId>org.eclipse.emf</groupId>
@@ -1013,6 +1163,7 @@
         <version>${xtext.version}</version>
         <scope>compile</scope>
       </dependency>
+      
       <!-- Yammer Metrics -->
       <dependency>
         <groupId>io.dropwizard.metrics</groupId>
@@ -1059,18 +1210,21 @@
         <artifactId>metrics-log4j</artifactId>
         <version>${yammer.version}</version>
       </dependency>
+      
       <!-- MongoDB Client -->
       <dependency>
         <groupId>org.mongodb</groupId>
         <artifactId>mongo-java-driver</artifactId>
         <version>${mongodb.client.version}</version>
       </dependency>
+      
       <!-- RRD4J: Logging, Graphing, and Consolidation for Time Series Data -->
       <dependency>
         <groupId>org.rrd4j</groupId>
         <artifactId>rrd4j</artifactId>
         <version>${rrd4j.version}</version>
       </dependency>
+      
       <!-- JUnit -->
       <dependency>
         <groupId>junit</groupId>
@@ -1078,6 +1232,7 @@
         <version>${junit.version}</version>
         <scope>test</scope>
       </dependency>
+      
       <!-- Optional testing utilities -->
       <dependency>
         <groupId>org.mockito</groupId>
@@ -1096,6 +1251,7 @@
         <artifactId>ant</artifactId>
         <version>1.9.3</version>
       </dependency>
+      
       <!-- EasyMock/PowerMock -->
       <dependency>
         <groupId>org.easymock</groupId>
@@ -1167,6 +1323,7 @@
       <repository> <id>aws-snapshot-repo</id> <name>S3 Snapshot Repository</name> 
       <url>s3://${s3-deploy-bucket}/snapshot</url> <releases> <enabled>false</enabled> 
       </releases> <snapshots> <enabled>true</enabled> </snapshots> </repository> -->
+
     <repository>
       <id>spring-artifactory</id>
       <name>Spring Artifactory</name>
@@ -1177,11 +1334,35 @@
         <updatePolicy>never</updatePolicy>
       </releases>
     </repository>
-    
+
     <repository>
-      <id>osgeo-plugins</id>
-      <name>OSGeo Consortium Maven Artifact Repository</name>
+      <id>osgeo-repo</id>
+      <name>OSGeo Consortium GeoTools Repository</name>
       <url>http://download.osgeo.org/webdav/geotools</url>
+      <releases>
+        <enabled>true</enabled>
+      </releases>
+      <snapshots>
+        <enabled>true</enabled>
+      </snapshots>
+    </repository>
+
+    <!-- add JBOSS repository for easy access to Hibernate libraries -->
+    <repository>
+      <id>jboss-repo</id>
+      <url>https://repository.jboss.org/nexus/content/repositories/releases/</url>
+      <releases>
+        <enabled>true</enabled>
+      </releases>
+      <snapshots>
+        <enabled>false</enabled>
+      </snapshots>
+    </repository>
+
+    <repository>
+      <id>hibernate-spatial-repo</id>
+      <name>Hibernate Spatial Repository</name>
+      <url>http://www.hibernatespatial.org/repository</url>
       <releases>
         <enabled>true</enabled>
       </releases>
@@ -1210,14 +1391,12 @@
       </snapshots>
     </pluginRepository>
   </pluginRepositories>
-
   <distributionManagement>
     <!-- <repository> <id>aws-release-repo</id> <name>S3 Release Repository</name> 
       <url>s3://${s3-deploy-bucket}/release</url> </repository> <snapshotRepository> 
       <id>aws-snapshot-repo</id> <name>S3 Snapshot Repository</name> <url>s3://${s3-deploy-bucket}/snapshot</url> 
       </snapshotRepository> -->
   </distributionManagement>
-
   <profiles>
     <!-- If a conflicting fourth-party dependencies requires handling, please 
       use profiles as described here to fork the dependency without having to touch 
@@ -1227,7 +1406,7 @@
       iniitally published, every artifact submodule contains a profile element 
       that activates the empty "no-forked-dependcies" profile below. Consider hypothetically 
       that we are forking a pre-existing dependency on some group=com.example, 
-      artifact=some-lib, version=2.2.4 such that a new module can carry a dependency
+      artifact=some-lib, version=2.2.4 such that a new module can carry a dependency 
       on version 1.5.0 of the same library. Its Ok if we have to make changes in 
       the new module's pom file to account for this requirements conflict, but 
       we cannot touch any other pom file. The "no-forked-dependencies" profile 

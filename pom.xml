@@ -42,7 +42,9 @@
 		<module>models/design-domain</module>
 		<module>models/publish-domain</module>
 		<module>models/runtime-domain</module>
+		<module>components/excel-reader</module>
 		<module>rest/resources-server</module>
+		<module>apps/alt-webui-war</module>
 <!-- TEMPORARILY disabling the old webui project until I can figure out what happened to its bower.json file
 		<module>apps/webui-war</module>
 -->
