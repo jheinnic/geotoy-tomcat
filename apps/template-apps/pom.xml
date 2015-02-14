@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>com.questinygroup.geotoy.poms</groupId>
+		<artifactId>war-parent</artifactId>
+		<version>0.0.1-SNAPSHOT</version>
+		<relativePath>../../poms/war-parent</relativePath>
+	</parent>
+
+	<groupId>com.questinygroup.geotoy.apps</groupId>
+	<artifactId>template-apps</artifactId>
+	<name>Reference project with ESRI Template packages downloaded for reference.</name>
+	<description/>
+
+	<packaging>war</packaging>
+
+	<properties>
+		<geotoy.war.use-frontend>true</geotoy.war.use-frontend>
+	</properties>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>com.github.eirslett</groupId>
+				<artifactId>frontend-maven-plugin</artifactId>
+			</plugin>
+		</plugins>
+	</build>
+
+	<dependencies/>
+
+	<profiles/>
+</project>

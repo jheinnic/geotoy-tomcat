@@ -12,7 +12,7 @@
 	<groupId>com.questinygroup.geotoy.rest</groupId>
 	<artifactId>resources-server</artifactId>
 
-	<name>Web UI for WiNS RESTful Services</name>
+	<name>WiNS RESTful Middle Tier Resource Services for backend UI support</name>
 	<description>Spring Controllers or Restlet Resources for request handling</description>
 
 	<packaging>jar</packaging>
@@ -20,8 +20,76 @@
 	<dependencies>
 		<!-- Just testing a dummy dependency -->
 		<dependency>
-			<groupId>org.projectreactor</groupId>
-			<artifactId>reactor-net</artifactId>
+			<groupId>com.vividsolutions</groupId>
+			<artifactId>jts</artifactId>
+		</dependency>
+                <dependency>
+			<groupId>org.postgis</groupId>
+			<artifactId>postgis-jdbc</artifactId>
+                </dependency>
+                <dependency>
+			<groupId>org.postgis</groupId>
+			<artifactId>postgis-stubs</artifactId>
+                </dependency>
+                <dependency>
+			<groupId>org.geoserver</groupId>
+			<artifactId>net.opengis.wfsv</artifactId>
+                </dependency>
+                <dependency>
+			<groupId>org.geoserver</groupId>
+			<artifactId>wfs</artifactId>
+                </dependency>
+                <dependency>
+			<groupId>org.geoserver</groupId>
+			<artifactId>wms</artifactId>
+                </dependency>
+                <dependency>
+			<groupId>org.geoserver</groupId>
+			<artifactId>ows</artifactId>
+                </dependency>
+                <dependency>
+			<groupId>org.geoserver</groupId>
+			<artifactId>platform</artifactId>
+                </dependency>
+                <dependency>
+			<groupId>org.geoserver</groupId>
+			<artifactId>data</artifactId>
+                </dependency>
+                <dependency>
+			<groupId>org.geoserver</groupId>
+			<artifactId>web</artifactId>
+                </dependency>
+                <dependency>
+			<groupId>org.geoserver</groupId>
+			<artifactId>validation</artifactId>
+                </dependency>
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-core</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-entitymanager</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-c3p0</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-validator</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-jpamodelgen</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-envers</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-spatial</artifactId>
 		</dependency>
 	</dependencies>
 
